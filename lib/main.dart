@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
           children: [
             GetChord(),
             Container(
-              child: Text('hi'),
+              child: Text('I am a developer, I can do what i want!!!'),
             )
           ],
         ),
