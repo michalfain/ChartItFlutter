@@ -16,7 +16,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Chart it"),
+          title: Text(
+            "Chart it",
+            style: TextStyle(color: Colors.lightBlue),
+          ),
         ),
         body: Column(
           children: [
