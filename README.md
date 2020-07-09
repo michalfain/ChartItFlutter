@@ -1,6 +1,6 @@
 # chart_it
 
-A new Flutter application.
+A new Flutter application that gives you charts
 
 ## Getting Started
 
