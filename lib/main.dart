@@ -17,16 +17,20 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Chart it",
-            style: TextStyle(color: Colors.lightBlue),
+            "Chart It",
+            style: TextStyle(color: Colors.white),
           ),
         ),
         body: Column(
           children: [
-            GetChord(),
-            Container(
-              child: Text('I am a developer, I can do what i want!!!'),
-            )
+            Row(
+              children: [
+                GetChord(),
+                GetChord(),
+                GetChord(),
+                GetChord(),
+              ],
+            ),
           ],
         ),
       ),
