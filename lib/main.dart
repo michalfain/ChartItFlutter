@@ -1,7 +1,7 @@
 import 'package:chart_it/widgets/barline_widget.dart';
 import 'package:chart_it/widgets/metronome_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:chart_it/widgets/ChordWidget.dart';
+import 'package:chart_it/widgets/chord_widget.dart';
 
 void main() {
   runApp(MyApp());
