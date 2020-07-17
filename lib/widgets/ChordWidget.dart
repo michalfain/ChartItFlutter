@@ -21,8 +21,6 @@ class _GetChordState extends State<GetChord> {
             width: 80.0,
             child: TextField(
               decoration: InputDecoration(
-//                filled: true,
-//                fillColor: Colors.grey[100],
                 border: InputBorder.none,
               ),
               onChanged: (String c) {
@@ -31,11 +29,6 @@ class _GetChordState extends State<GetChord> {
                 });
               },
             ),
-          ),
-          Container(
-            height: 47.0,
-            width: 1.0,
-            color: Colors.black,
           ),
         ],
       ),

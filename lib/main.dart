@@ -1,3 +1,5 @@
+import 'package:chart_it/widgets/barline_widget.dart';
+import 'package:chart_it/widgets/metronome_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:chart_it/widgets/ChordWidget.dart';
 
@@ -21,17 +23,27 @@ class _MyAppState extends State<MyApp> {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        body: Column(
-          children: [
-            Row(
-              children: [
-                GetChord(),
-                GetChord(),
-                GetChord(),
-                GetChord(),
-              ],
-            ),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MetronomeWidget(),
+                  GetChord(),
+                  BarLineWidget(),
+                  GetChord(),
+                  BarLineWidget(),
+                  GetChord(),
+                  BarLineWidget(),
+                  GetChord(),
+                  BarLineWidget(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
