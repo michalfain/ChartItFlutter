@@ -1,8 +1,7 @@
-import 'package:chart_it/widgets/barline_widget.dart';
-import 'file:///C:/Users/miche/Desktop/chart_it/screens/home.dart';
-import 'package:chart_it/widgets/metronome_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:chart_it/widgets/chord_widget.dart';
+import 'package:chart_it/screens/home.dart';
+import 'package:chart_it/screens/chord_sheet.dart';
+import 'package:chart_it/screens/about_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +16,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      initialRoute: Home.id,
+      routes: {
+        Home.id: (context) => Home(),
+        ChordSheet.id: (context) => ChordSheet(),
+        AboutScreen.id: (context) => AboutScreen(),
+      },
     );
   }
 }

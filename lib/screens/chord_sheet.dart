@@ -4,6 +4,8 @@ import 'package:chart_it/widgets/metronome_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChordSheet extends StatefulWidget {
+  static const String id = "ChordSheet";
+
   @override
   _ChordSheetState createState() => _ChordSheetState();
 }
