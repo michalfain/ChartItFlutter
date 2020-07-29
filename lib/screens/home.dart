@@ -1,5 +1,6 @@
 import 'package:chart_it/screens/about_screen.dart';
 import 'package:chart_it/screens/chord_sheet.dart';
+import 'package:chart_it/screens/contact_us_screen.dart';
 import 'package:chart_it/widgets/add_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,10 @@ class Home extends StatelessWidget {
             AddScreen(
               title: "About Chart It!",
               screenRoute: AboutScreen.id,
+            ),
+            AddScreen(
+              title: "Contact Us!",
+              screenRoute: ContactUs.id,
             ),
           ],
         ),

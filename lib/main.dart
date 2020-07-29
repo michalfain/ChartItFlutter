@@ -1,3 +1,4 @@
+import 'package:chart_it/screens/contact_us_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chart_it/screens/home.dart';
 import 'package:chart_it/screens/chord_sheet.dart';
@@ -16,11 +17,19 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.light().copyWith(
+        primaryColorDark: Color(0xff5A1178),
+        cardColor: Color(0xffE1CAEA),
+        canvasColor: Color(0xffC339F9),
+        primaryColor: Color(0xffBB1DF9),
+        backgroundColor: Color(0xffCBC6CD),
+      ),
       initialRoute: Home.id,
       routes: {
         Home.id: (context) => Home(),
         ChordSheet.id: (context) => ChordSheet(),
         AboutScreen.id: (context) => AboutScreen(),
+        ContactUs.id: (context) => ContactUs(),
       },
     );
   }
