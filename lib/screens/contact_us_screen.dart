@@ -1,4 +1,7 @@
+import 'package:chart_it/widgets/build_button_widget.dart';
 import 'package:chart_it/widgets/card_widget.dart';
+import 'package:chart_it/widgets/text_field_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContactUs extends StatefulWidget {
@@ -25,9 +28,21 @@ class _ContactUsState extends State<ContactUs> {
             text: 'michelle.fain@gmail.com',
             child: Icon(Icons.email),
           ),
-          TextField(),
-          TextField(),
-          TextField(),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                TextFieldWidget('Enter Your Name'),
+                TextFieldWidget('Enter Your Phone'),
+                TextFieldWidget('Enter your Email'),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 250.0,
+            child: Image.asset('assets/note_bg.png'),
+          ),
+          BuildButtonWidget('SEND'),
         ],
       ),
     );

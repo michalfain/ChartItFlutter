@@ -13,25 +13,33 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Chart It!'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            AddScreen(
-              title: "Add Chart",
-              screenRoute: ChordSheet.id,
-            ),
-            AddScreen(
-              title: "About Chart It!",
-              screenRoute: AboutScreen.id,
-            ),
-            AddScreen(
-              title: "Contact Us!",
-              screenRoute: ContactUs.id,
-            ),
-          ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/note_bg.png'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              AddScreen(
+                title: "Add Chart",
+                screenRoute: ChordSheet.id,
+              ),
+              AddScreen(
+                title: "About Chart It!",
+                screenRoute: AboutScreen.id,
+              ),
+              AddScreen(
+                title: "Contact Us!",
+                screenRoute: ContactUs.id,
+              ),
+            ],
+          ),
         ),
       ),
     );

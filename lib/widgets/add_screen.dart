@@ -24,7 +24,14 @@ class _AddScreenState extends State<AddScreen> {
             height: 100.0,
             width: 100.0,
           ),
-          Text(widget.title),
+          Text(
+            widget.title,
+            style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.w500,
+              color: Colors.black54,
+            ),
+          ),
         ],
       ),
     );
