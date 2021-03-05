@@ -1,33 +1,40 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class GetChord extends StatefulWidget {
+class ChordWidget extends StatefulWidget {
   @override
-  _GetChordState createState() => _GetChordState();
+  _ChordWidgetState createState() => _ChordWidgetState();
 }
 
-class _GetChordState extends State<GetChord> {
+class _ChordWidgetState extends State<ChordWidget> {
   String chord;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: 80.0,
-            width: 80.0,
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-              ),
-              onChanged: (String c) {
-                setState(() {
-                  chord = c;
-                });
-              },
+            width: 40.0,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 10.0, // todo: media query
+                ),
+                TextField(
+                  style: TextStyle(fontSize: 23.0),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    fillColor: Colors.white,
+                    filled: true,
+                  ),
+                  onChanged: (String c) {
+                    setState(() {
+                      chord = c;
+                    });
+                  },
+                ),
+              ],
             ),
           ),
         ],

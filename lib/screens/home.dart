@@ -1,22 +1,18 @@
-import 'package:chart_it/screens/about_screen.dart';
-import 'package:chart_it/screens/chord_sheet.dart';
-import 'package:chart_it/screens/contact_us_screen.dart';
+import 'package:chart_it/constants.dart';
 import 'package:chart_it/widgets/add_screen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  static const String id = "Home";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chart It!'),
+        title: Text(Constants.APP_TITLE),
       ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/note_bg.png'),
+            image: AssetImage(Constants.BACKGROUND_IMAGE),
             fit: BoxFit.fill,
           ),
         ),
@@ -27,16 +23,16 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               AddScreen(
-                title: "Add Chart",
-                screenRoute: ChordSheet.id,
+                title: Constants.ADD_CHART_SCREEN,
+                screenRoute: Constants.CHORD_SHEET_ID,
               ),
               AddScreen(
-                title: "About Chart It!",
-                screenRoute: AboutScreen.id,
+                title: Constants.ABOUT_SCREEN,
+                screenRoute: Constants.ABOUT_SCREEN_ID,
               ),
               AddScreen(
-                title: "Contact Us!",
-                screenRoute: ContactUs.id,
+                title: Constants.CONTACT_US_SCREEN,
+                screenRoute: Constants.CONTACT_US_ID,
               ),
             ],
           ),

@@ -6,7 +6,6 @@ class CardWidget extends StatelessWidget {
   final String text;
 
   //TODO : make card clickable
-
   @override
   Widget build(BuildContext context) {
     return Card(

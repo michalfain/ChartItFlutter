@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
+  //todo: add to basic widgets
   TextFieldWidget(this.hint);
 
   final String hint;

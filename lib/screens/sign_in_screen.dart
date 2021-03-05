@@ -1,12 +1,10 @@
-import 'package:chart_it/screens/home.dart';
+import 'package:chart_it/constants.dart';
 import 'package:chart_it/widgets/build_button_widget.dart';
 import 'package:chart_it/widgets/text_field_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
-  static const String id = 'SignInScreen';
-
   @override
   _SignInScreenState createState() => _SignInScreenState();
 }
@@ -16,62 +14,45 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign In Please'),
+        title: Text(Constants.SIGN_IN_SCREEN_APP_BAR_TITLE),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 25.0),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/note_bg.png'),
+            image: AssetImage(Constants.BACKGROUND_IMAGE),
             fit: BoxFit.fill,
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            TextFieldWidget('Email'),
-            TextFieldWidget('Password'),
+            TextFieldWidget(Constants.EMAIL),
+            TextFieldWidget(Constants.PASSWORD),
             SizedBox(
               height: 16.0,
             ),
             Align(
               alignment: Alignment.topRight,
-              child: Text(
-                'Forgot Password?',
-                style: TextStyle(
-                  color: Color(0xff04B684),
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              child: Text(Constants.FORGOT_PASSWORD, style: Constants.MEDIUM_TITLE_TEXT_STYLE),
             ),
-            BuildButtonWidget('Sign in'),
-            BuildButtonWidget('Sign in with Google'),
+            BuildButtonWidget(Constants.SIGN_IN),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account? ",
-                  style: TextStyle(
-                    color: Color(0xff04B684),
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  Constants.DONT_HAVE_ACCOUNT,
+                  style: Constants.MINI_TITLE_TEXT_STYLE,
                 ),
                 Text(
-                  "Register here",
-                  style: TextStyle(
-                    color: Color(0xff04B684),
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  Constants.REGISTER_HERE,
+                  style: Constants.MINI_TITLE_TEXT_STYLE,
                 ),
               ],
             ),
             FlatButton(
-              //TODO: delete this button once sign in is finished, make sure there is no back button to home screen
               onPressed: () {
-                Navigator.pushNamed(context, Home.id);
+                Navigator.pushNamed(context, Constants.HOME_ID);
               },
               child: Text('go in'),
             ),

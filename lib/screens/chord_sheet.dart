@@ -1,39 +1,29 @@
-import 'package:chart_it/widgets/barline_widget.dart';
-import 'package:chart_it/widgets/chord_widget.dart';
-import 'package:chart_it/widgets/metronome_widget.dart';
+import 'package:chart_it/constants.dart';
+import 'package:chart_it/widgets/bar_chord_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ChordSheet extends StatefulWidget {
-  static const String id = "ChordSheet";
-
+class ChordsSheet extends StatefulWidget {
   @override
-  _ChordSheetState createState() => _ChordSheetState();
+  _ChordsSheetState createState() => _ChordsSheetState();
 }
 
-class _ChordSheetState extends State<ChordSheet> {
+class _ChordsSheetState extends State<ChordsSheet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('New Chart'),
+        title: Text(Constants.NEW_CHART), // todo: chart name as title
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.only(left: 15, right: 15.0),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                MetronomeWidget(),
-                GetChord(),
-                BarLineWidget(),
-                GetChord(),
-                BarLineWidget(),
-                GetChord(),
-                BarLineWidget(),
-                GetChord(),
-                BarLineWidget(),
+                BarChordWidget(),
               ],
             ),
           ],

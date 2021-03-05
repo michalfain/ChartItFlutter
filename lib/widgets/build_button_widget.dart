@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class BuildButtonWidget extends StatelessWidget {
   BuildButtonWidget(this.title);
   final String title;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: ButtonTheme(
-        minWidth: 380.0,
+        minWidth: 380.0, //todo: media query
         height: 60.0,
         child: RaisedButton(
           shape: RoundedRectangleBorder(

@@ -1,31 +1,26 @@
+import 'package:chart_it/constants.dart';
 import 'package:flutter/material.dart';
 
-class AddScreen extends StatefulWidget {
+class AddScreen extends StatelessWidget {
   AddScreen({this.title, this.screenRoute});
-
   final String title;
   final String screenRoute;
 
   @override
-  _AddScreenState createState() => _AddScreenState();
-}
-
-class _AddScreenState extends State<AddScreen> {
-  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, widget.screenRoute);
+        Navigator.pushNamed(context, screenRoute);
       },
       child: Column(
         children: [
           Image.asset(
-            'assets/icon.png',
+            Constants.ICON_IMAGE,
             height: 100.0,
             width: 100.0,
           ),
           Text(
-            widget.title,
+            title,
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.w500,
