@@ -1,5 +1,6 @@
 import 'package:chart_it/constants.dart';
-import 'package:chart_it/widgets/bar_chord_widget.dart';
+import 'package:chart_it/widgets/chord_widget.dart';
+import 'package:chart_it/widgets/metronome_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class ChordsSheet extends StatefulWidget {
 }
 
 class _ChordsSheetState extends State<ChordsSheet> {
+  TextEditingController chordController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +23,12 @@ class _ChordsSheetState extends State<ChordsSheet> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                BarChordWidget(),
+                MetronomeWidget(),
+                ChordWidget(
+                  chordController: chordController,
+                ),
               ],
             ),
           ],

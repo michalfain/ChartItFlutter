@@ -5,7 +5,7 @@ class BarLineWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       //todo: media query
-      height: 47.0,
+      height: 60.0,
       width: 1.5,
       color: Colors.black,
     );
